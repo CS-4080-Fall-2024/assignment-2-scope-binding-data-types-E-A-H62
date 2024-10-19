@@ -13,6 +13,12 @@ class Cube:
         # initializes size of cube
         self.size = size
         # initializes face values of each side of cube as 2D array of string elements
+        # 'F' represents tiles originally starting in the front face
+        # 'B' represents tiles originally starting in the back face
+        # 'L' represents tiles originally starting in the left face
+        # 'R' represents tiles originally starting in the right face
+        # 'U' represents tiles originally starting in the up/top face
+        # 'D' represents tiles originally starting in the down/bottom face
         self.cube = {
             "front" : [['F' for i in range(size)] for i in range(size)],
             "back" : [['B' for i in range(size)] for i in range(size)],
