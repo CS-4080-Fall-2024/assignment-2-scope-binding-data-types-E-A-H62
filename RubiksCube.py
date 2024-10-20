@@ -212,9 +212,9 @@ class Cube:
             # last col of top face becomes last col of front face
             self.cube["front"][i][-1] = self.cube["up"][i][-1]
             # first col of back face becomes last col of top face
-            self.cube["up"][i][-1] = self.cube["back"][2 - i][0]
+            self.cube["up"][i][-1] = self.cube["back"][size-1-i][0]
             # last col of bottom face becomes first col col of back face
-            self.cube["back"][2 - i][0] = self.cube["down"][i][-1]
+            self.cube["back"][size-1-i][0] = self.cube["down"][i][-1]
             # last col of (original) front face becomes last col of bottom face
             self.cube["down"][i][-1] = tempCol[i]
 
@@ -232,9 +232,9 @@ class Cube:
             # first col of bottom face becomes first col of front face
             self.cube["front"][i][0] = self.cube["down"][i][0]
             # last col of back face becomes first col of bottom face
-            self.cube["down"][i][0] = self.cube["back"][2 - i][-1]
+            self.cube["down"][i][0] = self.cube["back"][size-1-i][-1]
             # first col of top face becomes last col of back face
-            self.cube["back"][2 - i][-1] = self.cube["up"][i][0]
+            self.cube["back"][size-1-i][-1] = self.cube["up"][i][0]
             # first col of (original) front face becomes first col of top face
             self.cube["up"][i][0] = tempCol[i]
 
